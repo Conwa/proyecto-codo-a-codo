@@ -1,7 +1,35 @@
 :root {
   --gris-primario: #353a40;
+  --verde: #19a83c;
+  --azul: #1d3a4a;
 }
 
 .bg-primario {
   background-color: var(--gris-primario);
+}
+
+.carousel-caption-position {
+  bottom: 30%;
+  left: 0%;
+  right: 0%;
+}
+
+.tickets-btn {
+  color: #fff;
+  background-color: var(--verde);
+  border-color: var(--verde);
+}
+
+.carousel-item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+footer {
+  background-color: var(--azul);
 }
