@@ -1,0 +1,7 @@
+:root {
+  --gris-primario: #353a40;
+}
+
+.bg-primario {
+  background-color: var(--gris-primario);
+}
