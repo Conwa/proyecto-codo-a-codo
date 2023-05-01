@@ -201,9 +201,54 @@
       </div>
     </div>
     <!--FORMULARIO ORADORES-->
-    <div id="formulario-oradores" class="container-fluid seccion">
-      <p class="pb-0 mb-0 mt-3 text-center">CONVIERTETE EN UN</p>
+    <div
+      id="formulario-oradores"
+      class="container seccion my-4"
+      style="max-width: 65%"
+    >
+      <p class="pb-0 mb-0 text-center">CONVIERTETE EN UN</p>
       <p class="fs-1 text-center">ORADOR</p>
+      <form>
+        <p class="fs-6 text-center">
+          Anotate como orador para dar una
+          <span style="border-bottom: dotted; border-width: 2px"
+            >charla ignite</span
+          >. Cuentanos de que quieres hablar!
+        </p>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="inputNombre"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="inputApellido"
+              placeholder="Apellido"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <textarea
+              type="text"
+              class="form-control"
+              id="inputTematica"
+              placeholder="Sobre que quieres hablar?"
+              style="height: 150px"
+            ></textarea>
+          </div>
+        </div>
+        <p class="fs-6 text-start text-secondary my-2">
+          Recuerda incluir un texto para tu charla.
+        </p>
+        <button type="submit" class="btn tickets-btn col-12">Enviar</button>
+      </form>
     </div>
 
     <!--FOOTER-->

@@ -8,6 +8,9 @@
   background-color: var(--gris-primario);
 }
 
+.bg-verde {
+  background-color: var(--verde);
+}
 .carousel-caption-position {
   bottom: 30%;
   left: 0%;
