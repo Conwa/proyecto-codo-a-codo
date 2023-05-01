@@ -34,18 +34,31 @@
           <!--LINKS-->
           <ul class="navbar-nav flex-row gap-2">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#carouselExampleSlidesOnly"
+                id="link-carousel"
                 >La conferencia</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Los oradores</a>
+              <a class="nav-link" href="#oradores" id="link-oradores"
+                >Los oradores</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">El lugar y la fecha</a>
+              <a class="nav-link" href="#lugar-y-fecha" id="link-lugar-y-fecha"
+                >El lugar y la fecha</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Conviértete en orador</a>
+              <a
+                class="nav-link"
+                href="#formulario-oradores"
+                id="link-formulario-oradores"
+                >Conviértete en orador</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link text-success" href="#">Comprar tickets</a>
@@ -57,7 +70,7 @@
     <!--CAROUSEL-->
     <div
       id="carouselExampleSlidesOnly"
-      class="carousel slide"
+      class="carousel slide seccion"
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
@@ -98,7 +111,7 @@
       </div>
     </div>
     <!--ORADORES-->
-    <div class="container">
+    <div id="oradores" class="container seccion">
       <p class="pb-0 mb-0 mt-3 text-center">CONOCE A LOS</p>
       <p class="fs-1 text-center">ORADORES</p>
 
@@ -162,8 +175,8 @@
         </div>
       </div>
     </div>
-    <!--LOCACION-->
-    <div class="container-fluid mx-0 mt-4 p-0">
+    <!--LUGAR Y FECHA-->
+    <div id="lugar-y-fecha" class="container-fluid mx-0 mt-4 p-0 seccion">
       <div class="row p-0 m-0">
         <div class="col-6 p-0 pe-1">
           <img src="/img/honolulu.jpg" class="img-fluid" alt="honolulu.jpg" />
@@ -187,8 +200,8 @@
         </div>
       </div>
     </div>
-    <!--FORM-->
-    <div class="container-fluid">
+    <!--FORMULARIO ORADORES-->
+    <div id="formulario-oradores" class="container-fluid seccion">
       <p class="pb-0 mb-0 mt-3 text-center">CONVIERTETE EN UN</p>
       <p class="fs-1 text-center">ORADOR</p>
     </div>
@@ -229,5 +242,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="/index.js"></script>
   </body>
 </html>
