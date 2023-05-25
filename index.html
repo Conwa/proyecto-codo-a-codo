@@ -13,13 +13,15 @@
       crossorigin="anonymous"
     />
     <link href="./styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
     <!--HEADER-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primario">
         <div class="container-fluid px-5 mx-2">
-          <a class="navbar-brand fs-4" href="#">
+          <a class="navbar-brand fs-4" href="#" id="link-conf_bsas">
             <!--IMAGEN-->
             <img
               src="/img/codoacodo.png"
@@ -43,12 +45,12 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#oradores" id="link-oradores"
+              <a class="nav-link" href="#oradores" id="link_oradores"
                 >Los oradores</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#lugar-y-fecha" id="link-lugar-y-fecha"
+              <a class="nav-link" href="#lugar-y-fecha" id="link-lugar_y_fecha"
                 >El lugar y la fecha</a
               >
             </li>
@@ -56,7 +58,7 @@
               <a
                 class="nav-link"
                 href="#formulario-oradores"
-                id="link-formulario-oradores"
+                id="link-formulario_oradores"
                 >Conviértete en orador</a
               >
             </li>
@@ -290,5 +292,30 @@
       crossorigin="anonymous"
     ></script>
     <script src="/index.js"></script>
+
+    <!-- 
+      FUNCION GENERADA CON CHAT GPT 
+      ARREGLA EL TEMA DEL OFFSET PARA VER BIEN LO ELEMENTOS -->
+    <script>
+      // Function to adjust the scroll position
+      function adjustScrollPosition(event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Get the target element's ID from the href attribute
+        var target = $(this).attr("href");
+
+        // Calculate the offset based on the height of the fixed navbar
+        var offset = $(target).offset().top - $(".navbar").outerHeight();
+
+        // Scroll to the target element with animation
+        $("html, body").animate({ scrollTop: offset }, 0);
+      }
+
+      // Attach the click event listener to the navbar links
+
+      $("#link_oradores").on("click", adjustScrollPosition);
+      $("#link-lugar_y_fecha").on("click", adjustScrollPosition);
+      $("#link-formulario_oradores").on("click", adjustScrollPosition);
+    </script>
   </body>
 </html>
