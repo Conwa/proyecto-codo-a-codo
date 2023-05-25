@@ -1,3 +1,4 @@
+//FUNCION PARA QUE SE RESALTE EL NAV
 const secciones = document.querySelectorAll(".seccion");
 
 const navLi = document.querySelectorAll(
@@ -23,4 +24,13 @@ window.onscroll = () => {
       a.classList.add("active");
     }
   });
+};
+
+// FUNCIONES PARA BORRAR Y MOSTRAR EL VALOR DEL FORMULARIOS DE TICKETS.HTML
+
+const eraseButton = document.querySelector("#erase-button");
+
+const clearForm = () => {
+  const form = document.querySelector("#entradas-form");
+  form.reset();
 };
