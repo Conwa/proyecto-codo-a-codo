@@ -28,9 +28,44 @@ window.onscroll = () => {
 
 // FUNCIONES PARA BORRAR Y MOSTRAR EL VALOR DEL FORMULARIOS DE TICKETS.HTML
 
-const eraseButton = document.querySelector("#erase-button");
-
 const clearForm = () => {
   const form = document.querySelector("#entradas-form");
   form.reset();
 };
+
+const ESTUDIANTE = "estudiante";
+const TRAINEE = "trainee";
+const JUNIOR = "junior";
+
+const form = document.querySelector("#entradas-form");
+
+const calcularEntradas = (e) => {
+  e.preventDefault();
+  let valorDeEntradas = 0;
+
+  const cantidad = document.querySelector("#exampleInputCantidad").value;
+  const tipoDeEntrada = document.querySelector("#exampleInputCategoria").value;
+
+  switch (tipoDeEntrada) {
+    case ESTUDIANTE:
+      valorDeEntradas = (cantidad * 200 * 20) / 100;
+      console.log(valorDeEntradas);
+      break;
+    case TRAINEE:
+      valorDeEntradas = (cantidad * 200 * 50) / 100;
+      console.log(valorDeEntradas);
+      break;
+    case JUNIOR:
+      valorDeEntradas = (cantidad * 200 * 85) / 100;
+      console.log(valorDeEntradas);
+      break;
+    default:
+      console.log("no funciona");
+  }
+
+  setTimeout(() => {
+    form.reset();
+  }, 3000);
+};
+
+form.addEventListener("submit", calcularEntradas);
