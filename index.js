@@ -46,18 +46,30 @@ const calcularEntradas = (e) => {
   const cantidad = document.querySelector("#exampleInputCantidad").value;
   const tipoDeEntrada = document.querySelector("#exampleInputCategoria").value;
 
+  const precioTotal = document.querySelector("#precio-total del");
+  const precioDescontado = document.querySelector("#precio-descontado");
+
   switch (tipoDeEntrada) {
     case ESTUDIANTE:
-      valorDeEntradas = (cantidad * 200 * 20) / 100;
-      console.log(valorDeEntradas);
+      valorDeEntradas = cantidad * 200;
+      valorDeEntradasDescontadas = (cantidad * 200 * 20) / 100;
+
+      precioTotal.textContent = `$${valorDeEntradas}`;
+      precioDescontado.textContent = `$${valorDeEntradasDescontadas}!`;
       break;
     case TRAINEE:
-      valorDeEntradas = (cantidad * 200 * 50) / 100;
-      console.log(valorDeEntradas);
+      valorDeEntradas = cantidad * 200;
+      valorDeEntradasDescontadas = (cantidad * 200 * 50) / 100;
+
+      precioTotal.textContent = `$${valorDeEntradas}`;
+      precioDescontado.textContent = `$${valorDeEntradasDescontadas}!`;
       break;
     case JUNIOR:
-      valorDeEntradas = (cantidad * 200 * 85) / 100;
-      console.log(valorDeEntradas);
+      valorDeEntradas = cantidad * 200;
+      valorDeEntradasDescontadas = (cantidad * 200 * 85) / 100;
+
+      precioTotal.textContent = `$${valorDeEntradas}`;
+      precioDescontado.textContent = `$${valorDeEntradasDescontadas}!`;
       break;
     default:
       console.log("no funciona");
@@ -65,6 +77,8 @@ const calcularEntradas = (e) => {
 
   setTimeout(() => {
     form.reset();
+    document.querySelector("#precio-total del").textContent = "";
+    document.querySelector("#precio-descontado").textContent = "";
   }, 3000);
 };
 
