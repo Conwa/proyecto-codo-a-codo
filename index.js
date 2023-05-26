@@ -77,8 +77,8 @@ const calcularEntradas = (e) => {
 
   setTimeout(() => {
     form.reset();
-    document.querySelector("#precio-total del").textContent = "";
-    document.querySelector("#precio-descontado").textContent = "";
+    precioTotal.textContent = "";
+    precioDescontado.textContent = "";
   }, 3000);
 };
 
